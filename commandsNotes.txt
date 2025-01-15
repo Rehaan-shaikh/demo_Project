@@ -1,0 +1,148 @@
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ touch chapter1.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ touch chapter2.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ touch chapter3.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ code chapter1.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ code chapter2.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ ^C
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol
+$ git init  //initilizing git
+Initialized empty Git repository in C:/Users/rehan/Downloads/Giga web dev/git-versioncontrol/.git/
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ ls -a
+./  ../  .git/  chapter1.txt  chapter2.txt  chapter3.txt
+//this   .git/ is hidden and to access it we should use commad $ ls -a
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git add chapter1.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git commit -m "complete chapter 1"  
+[master (root-commit) 93126b5] complete chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git log
+commit 93126b54e03983a5250d9e05005f991999636ab0 (HEAD -> master)
+Author: Maaz-Shaikh-413 <shaikhmaaz8788@gmail.com>
+Date:   Tue Jan 14 20:08:29 2025 +0530
+
+    complete chapter 1
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git add .
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git commit -m "Chapter 2 and 3 completed"
+[master 1b444be] Chapter 2 and 3 completed
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git log
+commit 1b444befa7fd8dd9307b24d133a51e19f285b217 (HEAD -> master)
+Author: Maaz-Shaikh-413 <shaikhmaaz8788@gmail.com>
+Date:   Tue Jan 14 20:11:12 2025 +0530
+
+    Chapter 2 and 3 completed
+
+commit 93126b54e03983a5250d9e05005f991999636ab0
+Author: Maaz-Shaikh-413 <shaikhmaaz8788@gmail.com>
+Date:   Tue Jan 14 20:08:29 2025 +0530
+:
+
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ ^C
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chapter2.txt
+        modified:   chapter3.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        commandsNotes.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 28f8aa0..fa7d540 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-he fought bravely and distroy the mother stone of those mosters and save everyone
+\ No newline at end of file
++he fought bravely and distroy the mother shgvxnbvzn xza amscbxxxxxxxxxxxxxxksjadbak....... of those mosters and save everyone
+:
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+
+
+//to push our project file in github remote reposetaries from above  local reposetaries
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git remote add origin https://github.com/Rehaan-shaikh/demo_Project.git //yjis is 
+
+rehan@REHAN MINGW64 ~/Downloads/Giga web dev/git-versioncontrol (master)
+$ git push -u origin main
